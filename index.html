@@ -3,6 +3,11 @@
 
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/1cb003d82d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
   </head>
@@ -10,16 +15,260 @@
   <body>
 
     <div class="grid4x4">
-      <nav class="sidebar">
 
+      <nav class="sidebar flex col">
+        <h1 class="title">
+          <i class="fa-solid fa-grip"></i> Dashboard
+        </h1>
+
+        <ul class="nav-options flex col">
+          <li><i class="fa-solid fa-house"></i> Home</li>
+          <li><i class="fa-solid fa-user"></i> Profile</li>
+          <li><i class="fa-solid fa-message"></i> Messages</li>
+          <li><i class="fa-solid fa-clock"></i> History</li>
+          <li><i class="fa-solid fa-list-check"></i> Tasks</li>
+          <li><i class="fa-solid fa-users"></i> Communities</li>
+          <li><i class="fa-solid fa-gear"></i> Settings</li>
+          <li><i class="fa-solid fa-circle-question"></i> Support</li>
+          <li><i class="fa-solid fa-shield-halved"></i> Privacy</li>
+        </ul>
       </nav>
-      <header>
 
+      <header>
+        <search class="flex al-cen">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" class="flex-1">
+          <button type="button" class="notifications"><i class="fa-solid fa-bell"></i></button>
+          <img src="./icons/profile-picture.png" alt="profile picture" class="pfp-s">
+          <p id="user-name-small">User name</p>
+        </search>
+
+        <div class="flex al-cen">
+          <img src="./icons/profile-picture.png" alt="profile picture" class="pfp-l">
+          <p>
+            Hi there,<br>
+            <span class="user-names">
+              <span id="user-name-big">User name</span> (@<span id="user-name-at">user-name</span>)
+            </span>
+          </p>
+          <button type="button" class="blue-big">New</button>
+          <button type="button" class="blue-big">Upload</button>
+          <button type="button" class="blue-big">Share</button>
+        </div>
       </header>
+
       <main class="grid2col">
-        <div class="projects"></div>
-        <div class="announcements"></div>
-        <div class="trending"></div>
+        <h2 class="projects-heading flex al-cen">Your Projects</h2>
+        <div class="projects-container">
+          <!-- PROJECT CONTAINER -->
+
+          <div class="pc flex col">
+
+            <h3>Super Cool Project</h3>
+            <p>
+              Suspendisse id purus finibus, tincidunt dui eget, tempor est. Sed posuere venenatis tortor, vel congue
+              nibh ullamcorper
+              ac. Aenean elementum lectus quis dolor bibendum, in pellentesque tellus gravida. Fusce porttitor lectus
+              mi, sit amet
+              pharetra risus cursus in. Sed laoreet gravida euismod. Sed ut est suscipit, condimentum sem ac, varius
+              orci. Ut ut
+              sollicitudin velit. Aenean varius luctus purus in aliquet. Nullam a convallis nisi.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Less Cool Project</h3>
+            <p>
+              Phasellus feugiat neque at sapien consectetur semper. Proin ex nibh, cursus vitae congue ac, molestie vel
+              augue.
+              Suspendisse lacinia, ipsum eget euismod dapibus, nisl velit pulvinar tellus, id luctus enim massa ut
+              ipsum. Donec sed
+              luctus mauris. Curabitur blandit accumsan nulla vitae sodales. Ut at interdum ligula. Cras ac vehicula
+              diam.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <!--  -->
+
+          <div class="pc flex col">
+
+            <h3>Super Cool Project</h3>
+            <p>
+              Suspendisse id purus finibus, tincidunt dui eget, tempor est. Sed posuere venenatis tortor, vel congue
+              nibh ullamcorper
+              ac. Aenean elementum lectus quis dolor bibendum, in pellentesque tellus gravida. Fusce porttitor lectus
+              mi, sit amet
+              pharetra risus cursus in. Sed laoreet gravida euismod. Sed ut est suscipit, condimentum sem ac, varius
+              orci. Ut ut
+              sollicitudin velit. Aenean varius luctus purus in aliquet. Nullam a convallis nisi.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Less Cool Project</h3>
+            <p>
+              Phasellus feugiat neque at sapien consectetur semper. Proin ex nibh, cursus vitae congue ac, molestie vel
+              augue.
+              Suspendisse lacinia, ipsum eget euismod dapibus, nisl velit pulvinar tellus, id luctus enim massa ut
+              ipsum. Donec sed
+              luctus mauris. Curabitur blandit accumsan nulla vitae sodales. Ut at interdum ligula. Cras ac vehicula
+              diam.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+
+
+          <div class="pc flex col">
+
+            <h3>Super Cool Project</h3>
+            <p>
+              Suspendisse id purus finibus, tincidunt dui eget, tempor est. Sed posuere venenatis tortor, vel congue
+              nibh ullamcorper
+              ac. Aenean elementum lectus quis dolor bibendum, in pellentesque tellus gravida. Fusce porttitor lectus
+              mi, sit amet
+              pharetra risus cursus in. Sed laoreet gravida euismod. Sed ut est suscipit, condimentum sem ac, varius
+              orci. Ut ut
+              sollicitudin velit. Aenean varius luctus purus in aliquet. Nullam a convallis nisi.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Less Cool Project</h3>
+            <p>
+              Phasellus feugiat neque at sapien consectetur semper. Proin ex nibh, cursus vitae congue ac, molestie vel
+              augue.
+              Suspendisse lacinia, ipsum eget euismod dapibus, nisl velit pulvinar tellus, id luctus enim massa ut
+              ipsum. Donec sed
+              luctus mauris. Curabitur blandit accumsan nulla vitae sodales. Ut at interdum ligula. Cras ac vehicula
+              diam.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Super Cool Project</h3>
+            <p>
+              Suspendisse id purus finibus, tincidunt dui eget, tempor est. Sed posuere venenatis tortor, vel congue
+              nibh ullamcorper
+              ac. Aenean elementum lectus quis dolor bibendum, in pellentesque tellus gravida. Fusce porttitor lectus
+              mi, sit amet
+              pharetra risus cursus in. Sed laoreet gravida euismod. Sed ut est suscipit, condimentum sem ac, varius
+              orci. Ut ut
+              sollicitudin velit. Aenean varius luctus purus in aliquet. Nullam a convallis nisi.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Less Cool Project</h3>
+            <p>
+              Phasellus feugiat neque at sapien consectetur semper. Proin ex nibh, cursus vitae congue ac, molestie vel
+              augue.
+              Suspendisse lacinia, ipsum eget euismod dapibus, nisl velit pulvinar tellus, id luctus enim massa ut
+              ipsum. Donec sed
+              luctus mauris. Curabitur blandit accumsan nulla vitae sodales. Ut at interdum ligula. Cras ac vehicula
+              diam.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Super Cool Project</h3>
+            <p>
+              Suspendisse id purus finibus, tincidunt dui eget, tempor est. Sed posuere venenatis tortor, vel congue
+              nibh ullamcorper
+              ac. Aenean elementum lectus quis dolor bibendum, in pellentesque tellus gravida. Fusce porttitor lectus
+              mi, sit amet
+              pharetra risus cursus in. Sed laoreet gravida euismod. Sed ut est suscipit, condimentum sem ac, varius
+              orci. Ut ut
+              sollicitudin velit. Aenean varius luctus purus in aliquet. Nullam a convallis nisi.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+          <div class="pc flex col">
+
+            <h3>Less Cool Project</h3>
+            <p>
+              Phasellus feugiat neque at sapien consectetur semper. Proin ex nibh, cursus vitae congue ac, molestie vel
+              augue.
+              Suspendisse lacinia, ipsum eget euismod dapibus, nisl velit pulvinar tellus, id luctus enim massa ut
+              ipsum. Donec sed
+              luctus mauris. Curabitur blandit accumsan nulla vitae sodales. Ut at interdum ligula. Cras ac vehicula
+              diam.
+            </p>
+            <div class="flex">
+              <button type="button" class="favourite"><i class="fa-regular fa-star"></i></button>
+              <button type="button" class="visibility"><i class="fa-regular fa-eye"></i></button>
+              <button type="button" class="share"><i class="fa-solid fa-share-nodes fa-rotate-270"></i></button>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <h2 class="announcements-heading flex al-cen">Announcements</h2>
+        <div class="announcements-container"></div>
+
+        <h2 class="trending-heading flex al-cen">Trending</h2>
+        <div class="trending-container"></div>
       </main>
     </div>
   </body>

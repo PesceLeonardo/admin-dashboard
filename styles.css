@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Roboto", monospace;
+  font-size: 14px;
+
+  --light-blue: rgb(50, 135, 240);
+  --grey: rgb(235, 235, 245);
+  --bold: 700;
+  --light-bold: 500;
+}
+
+.flex   { display: flex; }
+.col    { flex-direction: column; }
+.flex-1 { flex: 1; }
+.al-cen { align-items: center; }
+.pfp-s  { width: 40px; height: 4opx; border-radius: 50%; background-color: rgb(235, 235, 235); }
+.pfp-l  { width: 60px; height: 60px; border-radius: 50%; background-color: rgb(235, 235, 235); }
+
+.grid4x4 {
+  margin: 0 auto 0;
+  height: 100vh;
+  width: 80vw;
+
+  display: grid;
+  grid-template: 150px 1fr / 250px 1fr;
+}
+
+
+
+/* SIDEBAR STYLES */
+
+.sidebar {
+  background-color: var(--light-blue);
+
+  grid-area: 1 / 1 / 3 / 2;
+
+  padding: 16px;
+  color: white;
+}
+
+.sidebar h1 {
+  margin-bottom: 48px;
+  font-size: 2.2rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  font-weight: var(--bold);
+}
+
+.sidebar li:nth-child(7) {
+  margin-top: 40px;
+}
+
+.sidebar i {
+  width: 40px;
+  text-align: center;
+}
+
+
+
+/* HEADER STYLES */
+
+.grid4x4 > header {
+  background-color: white;
+
+  grid-area: 1 / 2 / 2 / 3;
+
+  padding: 16px 48px;
+
+  display: grid;
+  grid-template: 2fr 3fr / 1fr;
+  place-content: center;
+}
+
+/* HEADER SEARCH STYLES */
+
+header > search {
+  gap: 16px;
+}
+
+header > search i {
+  width: 24px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+header > search > input[type="search"] {
+  --height-r1: 24px;
+  height: var(--height-r1);
+  border-radius: calc(var(--height-r1) / 2);
+
+  border: none;
+  background-color: var(--grey);
+
+  padding-left: 8px;
+  overflow: scroll;
+}
+
+header > search > input[type="search"]:focus {
+  outline: 2px solid black;
+}
+
+header > search > button {
+  all: unset;
+}
+
+#user-name-small {
+  padding: 0 16px;
+
+  width: max-content;
+  min-width: 64px;
+
+  font-size: 1.1rem;
+  font-weight: var(--bold);
+}
+
+header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  clip-path: inset(0 0 -16px 0);
+}
+
+/* HEADER DIV STYLES */
+
+header > div > img {
+  margin-right: 24px;
+}
+
+header > div > p {
+  margin-right: auto;
+  font-weight: var(--light-bold);
+}
+
+.user-names {
+  font-size: 1.5rem;
+  font-weight: var(--bold);
+}
+
+header > div > button {
+  all: unset;
+
+  --height-r2: 32px;
+
+  margin-left: 24px;
+
+  width: 80px;
+  height: var(--height-r2);
+  border-radius: calc(var(--height-r2) / 2);
+
+  background-color: var(--light-blue);
+
+  text-align: center;
+  color: white;
+  font-weight: var(--light-bold);
+}
+
+
+
+/* CONTENT STYLES */
+
+.grid4x4 > main {
+  background-color: var(--grey);
+
+  grid-area: 2 / 2 / 3 / 3;
+
+  display: grid;
+  grid-template: 40px 1fr 40px 1fr / 2fr 1fr;
+  column-gap: 12px;
+
+  padding: 24px 16px 64px;
+}
+
+main > h2 {
+  font-size: 1.2rem;
+  font-weight: var(--light-bold);
+}
+
+.projects-heading {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.projects-container {
+  --row-size: clamp(150px, 20vh, 400px);
+  --gap20: 20px;
+
+  height: calc(var(--row-size) * 3 + var(--gap20) * 2);
+  grid-area: 2 / 1 / 5 / 2;
+
+  display: grid;
+  grid-template: repeat(3, var(--row-size)) / repeat(2, 1fr);
+  grid-auto-rows: var(--row-size);
+
+  gap: var(--gap20);
+
+  overflow-y: scroll;
+}
+
+.announcements-heading {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.announcements-container {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.trending-heading {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.trending-container {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+/* PROJECTS STYLES */
+
+.pc {
+  height: 100%;
+
+  padding: 0 20px;
+
+  background: linear-gradient(to right, rgb(255, 190, 40) 3%, white 3%);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pc > h3 {
+  margin: 24px 0 8px;
+  height: min-content;
+  text-overflow: ellipsis;
+}
+
+.pc > p {
+  height: 60px;
+  overflow: auto;
+}
+
+.pc > div {
+  margin: auto 0 16px;
+  justify-content: right;
+  gap: 20px;
+}
+
+.pc > div > button {
+  all: unset;
+
+  width: 16px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ANNOUNCEMENTS STYLES */
+
+/* TRENDING STYLES */
