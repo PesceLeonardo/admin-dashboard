@@ -29,7 +29,8 @@
 .pfp-s  { width: 40px; height: 40px; border-radius: 50%; background-color: rgb(235, 235, 235); }
 
 .interact:hover,
-.interact-container > *:hover {
+.interact-container > *:hover,
+.interact-box-container i:hover {
   transform: translateY(-4px);
   text-shadow: 0 4px rgba(0, 0, 0, 0.3);
 
@@ -37,7 +38,8 @@
 }
 
 .interact:active,
-.interact-container > *:active {
+.interact-container > *:active,
+.interact-box-container i:active {
   transform: translateY(2px);
 
   transition: all 0.05s ease;
