@@ -21,7 +21,7 @@
           <i class="fa-solid fa-grip"></i> Dashboard
         </h1>
 
-        <ul class="nav-options flex col">
+        <ul class="nav-options flex col interact-container">
           <li><i class="fa-solid fa-house"></i> Home</li>
           <li><i class="fa-solid fa-user"></i> Profile</li>
           <li><i class="fa-solid fa-message"></i> Messages</li>
@@ -38,9 +38,9 @@
         <search class="flex al-cen">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="search" class="flex-1">
-          <button type="button" class="notifications"><i class="fa-solid fa-bell"></i></button>
+          <button type="button" class="notifications interact"><i class="fa-solid fa-bell"></i></button>
           <img src="./icons/profile-picture.png" alt="profile picture" class="pfp-s">
-          <p id="user-name-small">User name</p>
+          <p id="user-name-small" class="interact">User name</p>
         </search>
 
         <div class="flex al-cen">
@@ -51,15 +51,15 @@
               <span id="user-name-big">User name</span> (@<span id="user-name-at">user-name</span>)
             </span>
           </p>
-          <button type="button" class="blue-big">New</button>
-          <button type="button" class="blue-big">Upload</button>
-          <button type="button" class="blue-big">Share</button>
+          <button type="button" class="blue-big interact-box">New</button>
+          <button type="button" class="blue-big interact-box">Upload</button>
+          <button type="button" class="blue-big interact-box">Share</button>
         </div>
       </header>
 
       <main class="grid2col">
         <h2 class="projects-heading flex al-cen">Your Projects</h2>
-        <div class="projects-container">
+        <div class="projects-container interact-box-container">
           <!-- PROJECT CONTAINER -->
 
           <div class="pc flex col">
@@ -304,7 +304,7 @@
         </div>
 
         <h2 class="announcements-heading flex al-cen">Announcements</h2>
-        <div class="announcements-container">
+        <div class="announcements-container interact-container-noshadow">
 
           <div class="ac">
             <h3>Site Maintainece</h3>
@@ -364,7 +364,7 @@
         </div>
 
         <h2 class="trending-heading flex al-cen">Trending</h2>
-        <div class="trending-container">
+        <div class="trending-container interact-container-noshadow">
 
           <div class="tc flex al-cen">
             <img src="./icons/profile-picture.png" alt="user logo" class="user-logo pfp-s">
